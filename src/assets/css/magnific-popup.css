@@ -15,10 +15,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1043;
+  z-index: 2042;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden; }
+  backface-visibility: hidden;
+ }
 
 .mfp-container {
   text-align: center;
@@ -110,7 +111,7 @@ button.mfp-arrow {
   cursor: pointer;
   background: transparent;
   border: 0;
-  -webkit-appearance: none;
+  appearance: none;
   display: block;
   outline: none;
   padding: 0;
@@ -133,7 +134,7 @@ button::-moz-focus-inner {
   text-align: center;
   opacity: 0.65;
   padding: 0 0 18px 10px;
-  color: #FFF;
+  color: #eb1515;
   font-style: normal;
   font-size: 28px;
   font-family: Arial, Baskerville, monospace; }
