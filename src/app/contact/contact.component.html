@@ -1,0 +1,52 @@
+ <!-- Start Contact -->
+ <section id="contact" class="section section_padding back_color1">
+    <div class="container">
+        <!--<h2 class="color1"><span class="span_color">Me</span> Contacter</h2>-->
+        <div class="ribbon">Me Contacter</div>
+        <div class="contact_me row">
+            <div class="col-xs-12 col-md-4">
+                <address>
+                    <div class="contact">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span class="color1 font_size16"><a href="https://www.google.fr/maps/place/Paris/@48.8588255,2.2646334,12z/data=!3m1!4b1!4m6!3m5!1s0x47e66e1f06e2b70f:0x40b82c3688c9460!8m2!3d48.856614!4d2.3522219!16zL20vMDVxdGo?entry=ttu" target="_blank">Île-de-France</a></span>
+                        <!--<p class="color1">Montpellier, France</p>-->
+                    </div>
+                    <div class="contact">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="color1 font_size16"><a href="https://www.linkedin.com/in/hayari/" target="_blank">Hayari</a></span>
+                        <!--<p class="color1"><a href="https://www.linkedin.com/in/hayari/" target="_blank">https://www.linkedin.com/in/hayari/</a></p>-->
+                    </div>
+                    <div class="contact">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span class="color1 font_size16"><a href="https://github.com/hayari-nour" target="_blank">hayari-nour</a></span>
+                    </div>
+                </address>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                
+                <form class="form-horizontal contact_form" (submit)="sendEmail($event)">
+                   <div class="form-group form-group-lg">
+                        <div class="col-xs-12">
+                            <input type="text" class="font_size16 form-control" id="inputname" placeholder="Nom" name="user_name" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <div class="col-xs-12">
+                            <input type="email" class="font_size16 form-control" id="inputemail" placeholder="Email" name="user_email" required="required" autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <div class="col-xs-12">
+                            <textarea class="font_size16 form-control" rows="5" id="inputmessage" placeholder="Votre Message" name="message" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <div class="col-xs-12">
+                            <button type="submit" class="btn font_size16" name="Send" value="Send">ENVOYER</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

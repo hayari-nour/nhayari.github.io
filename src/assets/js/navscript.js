@@ -51,7 +51,7 @@
         });
 
         // Gestion du footer
-        const footerLink = document.querySelector("footer a");
+        /*const footerLink = document.querySelector("footer a");
         if (window.innerHeight + scrollPosition >= document.body.offsetHeight) {
             navLinks.forEach(link => {
                 link.classList.remove("active");
@@ -60,7 +60,7 @@
             footerLink.classList.add("active");
         } else {
             footerLink.classList.remove("active");
-        }
+        }*/
     });
 
     // Fonction pour défilement doux

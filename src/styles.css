@@ -75,15 +75,11 @@ a,a:hover,a:focus{
 .back_color1{
    /* background-color: #232323 !important;*/
 }
-.back_color2old{
-    background-color: #111 !important;
+.backdiv{
+    background-color: rgba(0,0,0,.4) !important;
 }
 .back_color2{
-    background-color: transparent;
-   /*background-color: #000000;*/
-}
-.color1old{
-    color: #fff !important;
+    background-color: rgba(0,0,0,0.65) !important;
 }
 
 .color1{
@@ -148,7 +144,7 @@ nav{
 }
 
 .bg-body-tertiary {
-      height: 50px;
+  height: 50px;
   justify-content: center;
   position: fixed;
   background-color: #000 !important;
@@ -199,6 +195,11 @@ nav .navbar-nav > li > a:focus,
 nav .navbar-nav > li > a.current{
     background-color: transparent !important;
 	font-weight: bold;
+	-webkit-animation-duration: 0.8s;
+    -webkit-animation-name: font-effect-fire-animation-keyframes;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    
 	animation-duration: 0.8s;
     animation-name: font-effect-fire-animation-keyframes;
     animation-iteration-count: infinite;
@@ -212,6 +213,8 @@ nav .navbar-nav > li > a:hover
 {
     background-color: transparent !important;
  	font-weight: bold;
+	-webkit-animation-duration: 0.8s;
+    -webkit-animation-name: font-effect-fire-animation-keyframes;
 	animation-duration: 0.8s;
     animation-name: font-effect-fire-animation-keyframes;
     /*-webkit-animation-iteration-count: infinite;*/
@@ -223,14 +226,6 @@ nav .navbar-nav > li > a:hover
 /*----------------------------------------------
 *   04. Home
 *----------------------------------------------*/
-/*eader {
-    position :fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-	background: transpartent;
-	z-index :1000;
-	}*/
 	
 .flag-icon {
            font-size: 1em;
@@ -255,7 +250,7 @@ header{
     min-height: 750px;
     max-height: 1000px;
 }
-header .background{
+.bckground{
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -264,21 +259,9 @@ header .background{
     bottom: 0;
     left: 0;
     right: 0;
-   /*background-image: url("../images/d.png");*/
-      /*background-image: url("../images/g.png");*/
-	  /*background-image: url("../images/r.png");*/
-	/*background-image: url("../images/eclipse.png");*/
-	/*background-image: url("../images/datalake.png");*/
-	/*background-image: url("../images/courbe.png");*/
-	/*background-image: url("../images/stars.gif");*/
-	background-image: url("assets/images/b0000.jpg");
-	
-	
-		
-	
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+	background-image: url("assets/images/bckg.jpg");
 }
 
 header .header_content{
@@ -332,7 +315,7 @@ header .to_down{
     position: absolute;
     bottom: 4px;
     left: 50%;
-    z-index: 2;
+    z-index: 999;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     background-color: transparent;
@@ -425,8 +408,8 @@ header .to_down:hover i{
 .skills .service_item{
     padding: 45px 8px 0px 8px;
     border: 1px solid rgba(255,255,255,.15);
-   box-shadow: 0 0 2px rgba(0,0,0,.6);
-    -webkit-transition: all .2s ease-in-out;
+    box-shadow: 0 0 2px rgba(0,0,0,.6);
+   -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 .skills .service_item:hover{
@@ -1102,14 +1085,21 @@ font-size: 0.9em;
 	height: 100px;
 	border-radius: 50%;
 	border: 8px solid #fff;
-	border-top:  8px solid yellow;
-	border-bottom:  8px solid yellow;
+	border-top:  8px solid rgb(16, 16, 16);
+	border-bottom:  8px solid rgb(16, 16, 16);
 	animation: anime 1.4s ease infinite;
+    -webkit-animation: anime 1.4s ease infinite;
 }
 
 @keyframes anime{
-	from{ transform: rotate(0deg); }
-	to{ transform: rotate(360deg); }
+   from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
 }
 
 .spinner::before{
@@ -1122,6 +1112,7 @@ font-size: 0.9em;
 	border-radius: inherit;
 	opacity: 0.6;
 	transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 	border: 10px solid #fff ;
 	border-left: 10px solid #00deff;
 	border-right: 10px solid #00deff ;
@@ -1137,6 +1128,7 @@ font-size: 0.9em;
 	border-radius: inherit;
 	opacity: 0.6;
 	transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 	border: 12px solid #fff ;
 	border-top: 12px solid #00deff ;
 	border-bottom: 12px solid #00deff ;				
@@ -1150,20 +1142,20 @@ font-size: 0.9em;
  
 /*  wave  */
 
+
 .wave {
     display: grid;
     place-content: center;
-    /*min-height: 100vh;*/
-    height: 60%;
-    min-height: 60%;
-    margin: 0;
+    height: 80%;
+    min-height: 80%;
+   
   
 }
 
 .wave h1 span {
     --c1: #00FFFF;
     --c2: white;
-    
+    --c3: #f20707;
     --_p: 93% 83.5% at;
     --_g1: radial-gradient(var(--_p) bottom, var(--c1) 79.5%, #0000 80%) no-repeat;
     --_g2: radial-gradient(var(--_p) top, #0000 79.5%, var(--c1) 80%) no-repeat;
@@ -1174,7 +1166,7 @@ font-size: 0.9em;
     -webkit-background-clip: text;
     background-clip: text;
     color: #0000;
-    -webkit-text-stroke: 0.1rem var(--c1);
+    -webkit-text-stroke: 0.1rem var(--c3);
     -webkit-box-decoration-break: clone;
     -o-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -1183,7 +1175,13 @@ font-size: 0.9em;
     animation-iteration-count: infinite;
     animation-timing-function: alternate, linear;
 
-    /*animation: skfs 2s infinite alternate, mkfs 3s infinite linear;*/
+    -webkit-animation-name: skfs, mkfs;
+    -webkit-animation-duration: 2s, 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: alternate, linear;
+
+
+    
 }
 
 @keyframes mkfs {
@@ -1222,17 +1220,17 @@ font-size: 0.9em;
 
 .wave h1 {
     font-family: system-ui, sans-serif;
-    font-size: 6vw;
+    font-size: 11vw;
     text-align: center;
     font-weight:bold; 
 }
 
 
-/* text turn*/
+
 
 .waviy {
 
-        position: relative;
+   position: relative;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1241,32 +1239,36 @@ font-size: 0.9em;
     position: relative;
     display: inline-block;
     font-size: 3vw;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     animation: flip 6s infinite;
-    animation-delay: calc(.2s * var(--i))
+    animation-delay: calc(.2s * var(--i));
+    -webkit-animation: flip 6s infinite;
+    -webkit-animation-delay: calc(.2s * var(--i))
 }
 
 @keyframes flip {
 
     0%,
     80% {
-        transform: rotateY(360deg)
+        transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg)
     }
 }
 
 
 
 
-/* noise**/
+
 
  
  .noisenour {
     position: relative;
-    font-size: 4vw;
-    font-weight: 700;
+    font-size: 8vw;
+    text-align: center;
+    font-weight:bold; 
     line-height: 1.2;
-    color: #00FFFF;
+    color: #000;
     letter-spacing: 4px;
     z-index: 1;
  }
@@ -1278,10 +1280,11 @@ font-size: 0.9em;
     left: -2px;
     width: 100%;
     color: white;
-    /*background-color: #222;*/
+    
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-before 3s infinite linear alternate-reverse;
+    -webkit-animation: noise-before 3s infinite linear alternate-reverse;
  }
  
  .noisenour:after {
@@ -1291,10 +1294,11 @@ font-size: 0.9em;
     left: 2px;
     width: 100%;
     color: #00FFFF;
-    /*background-color: #222;*/
+    
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-after 2s infinite linear alternate-reverse;
+    -webkit-animation: noise-after 2s infinite linear alternate-reverse;
  }
  
  @keyframes noise-before {
@@ -1469,7 +1473,6 @@ font-size: 0.9em;
     }
  }
 
-
  
 /* HTML: <div class="ribbon">Your text content</div> */
 .ribbon {
@@ -1573,17 +1576,24 @@ label {
   position: absolute;
   z-index: 100;
   top: 20px;
-  transition: -webkit-transform 0.2s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
 }
-
 .radio {
   display: none;
 }
 
 .radio:checked + .relative label {
   cursor: auto;
+  -webkit-transform: translateX(42px);
   transform: translateX(42px);
+  /*-webkit-transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear; */
+  /*chat gpt*/
 }
+
+
+
 .radio:checked + .relative .circle {
   background: #f98262;
 }
@@ -1591,14 +1601,17 @@ label {
   max-height: 180px;
   border-color: #eee9dc;
   margin-right: 20px;
-      box-shadow: 0 0 2px rgba(255,255,255,.8);
+  box-shadow: 0 0 2px rgba(255,255,255,.8);
   transform: translateX(20px);
   transition: max-height 0.4s linear, border-color 0.5s linear, -webkit-transform 0.2s linear;
+  -webkit-transform: translateX(20px);
+  -webkit-transition: max-height 0.4s linear, border-color 0.5s linear, -webkit-transform 0.2s linear;
 }
 .radio:checked ~ .content p {
   max-height: 200px;
   color: #eee9dc;
   transition: color 0.3s linear 0.3s;
+  -webkit-transition: color 0.3s linear 0.3s;
 }
 
 .work label:hover{
