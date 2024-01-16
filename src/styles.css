@@ -1154,8 +1154,8 @@ font-size: 0.9em;
 
 .wave h1 span {
     --c1: #00FFFF;
-    --c2: white;
-    --c3: #f20707;
+    --c2: #fff;
+    --c3: #fff;
     --_p: 93% 83.5% at;
     --_g1: radial-gradient(var(--_p) bottom, var(--c1) 79.5%, #0000 80%) no-repeat;
     --_g2: radial-gradient(var(--_p) top, #0000 79.5%, var(--c1) 80%) no-repeat;
@@ -1268,7 +1268,7 @@ font-size: 0.9em;
     text-align: center;
     font-weight:bold; 
     line-height: 1.2;
-    color: #000;
+    color: #fff;
     letter-spacing: 4px;
     z-index: 1;
  }
@@ -1279,7 +1279,7 @@ font-size: 0.9em;
     top: 0;
     left: -2px;
     width: 100%;
-    color: white;
+    color: #000;
     
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);

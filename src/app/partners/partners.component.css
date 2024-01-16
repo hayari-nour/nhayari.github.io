@@ -1,0 +1,115 @@
+
+.partners-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.partner-logo {
+    max-width: 100px; /* Définissez la largeur maximale selon vos besoins */
+    max-height: 70px; /* Définissez la hauteur maximale selon vos besoins */
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    background-color: #fff;  
+    object-fit: contain;
+}
+
+
+
+/*@import url(../../assets/styles/tablestyle.css);*/
+/*
+.partner-logo {
+    max-width: 150px;
+   height: 70px;
+}
+.partner {
+    margin-bottom: 7%;
+}
+.partner-logo {
+    margin-left: 15px;
+}
+
+.box {
+    padding: 12px;
+}
+
+
+
+
+.rebondp {
+        display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+    justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.itemp {
+    -webkit-animation: rebond 2s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+    animation: rebond 2s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+}
+
+
+.itemp:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.itemp:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.itemp:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.itemp:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.itemp:nth-child(5) {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.itemp:nth-child(6) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+
+@-webkit-keyframes rebond {
+    0% {
+        transform: translate3d(0, 0, 0);
+        text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+    }
+
+    100% {
+        transform: translate3d(1em, 0, 0);
+        text-shadow: rgba(0, 0, 0, 0.4) 0 1em 0.35em;
+    }
+}
+
+@keyframes rebond {
+    0% {
+        transform: translate3d(0, 0, 0);
+        text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+    }
+
+    100% {
+        transform: translate3d(1.3em, 0, 0);
+        text-shadow: rgba(0, 0, 0, 0.4) 0 1em 0.35em;
+    }
+}
+
+*/
