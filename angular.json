@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hayariportfolio24",
+            "outputPath": "dist/hayari.github.io",
+            "baseHref": "/"
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
